@@ -1,4 +1,5 @@
 import { Col, Row, Input } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Search } = Input;
 
@@ -9,17 +10,21 @@ function HeaderTop() {
       <div className="container">
 
         <Row gutter={[16, 16]}>
-          <Col lg={12} md={24}>
+          <Col md={12}>
             <div className="special_menu">
               <ul className="special_menu_links">
-                <li className="special_menu_link"><i className="fa fa-sitemap"></i> Sayt xaritasi</li>
-                <li className="special_menu_link"><i className="fa fa-mobile"></i> Mobil taqvim</li>
-                <li className="special_menu_link"><i className="fa fa-eye"></i> Zaif ko'ruvchilar uchun</li>
-                <li className="special_menu_link"><i className="fa fa-volume-up"></i> Ovozli o'qish</li>
+                <li className="special_menu_link">
+                  <Link to={"/siteMap"}>
+                    <i className="fa fa-sitemap"></i> <span>Sayt xaritasi</span>
+                  </Link>
+                </li>
+                <li className="special_menu_link"><i className="fa fa-mobile"></i> <span>Mobil taqvim</span></li>
+                <li className="special_menu_link"><i className="fa fa-eye"></i> <span>Zaif ko'ruvchilar uchun</span></li>
+                <li className="special_menu_link"><i className="fa fa-volume-up"></i> <span>Ovozli o'qish</span></li>
               </ul>
             </div>
           </Col>
-          <Col lg={12} md={24}>
+          <Col md={12}>
             <div className="right">
               <ul className="social_medias">
                 <li className="social_media">

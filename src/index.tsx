@@ -1,23 +1,24 @@
 import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
 import 'antd/dist/antd.css';
-import "./styles/style.scss";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import "swiper/css/effect-fade";
 
-ReactDOM.render(
+import "./static/styles/style.scss";
+
+
+render(
   <React.StrictMode>
     <Suspense fallback={<div>Loading...</div>}>
       <Router>
         <App />
       </Router>
     </Suspense>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+  </React.StrictMode>, document.getElementById('root')
+)
 reportWebVitals();

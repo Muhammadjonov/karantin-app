@@ -1,4 +1,6 @@
 .header {
+
+  // headerTop
   .header_top {
     padding: 6px 0;
 
@@ -15,6 +17,10 @@
 
         .special_menu_link {
           margin-right: 20px;
+
+          a {
+            color: #000;
+          }
 
           i {
             margin-right    : 2px;
@@ -59,12 +65,18 @@
           border-radius   : 15px;
           padding         : 1px 15px;
           transition      : all .7s ease;
+          padding-right   : 40px;
+
+          &:focus {
+            outline: none;
+          }
         }
 
         i {
           position: absolute;
-          top     : 5px;
+          top     : 6px;
           right   : 15px;
+          cursor  : pointer;
         }
       }
 
@@ -78,6 +90,7 @@
           li {
             padding     : 0 7px;
             border-right: 1px solid #dedede;
+            cursor      : pointer;
 
             &:last-child {
               border-right: none;
@@ -87,4 +100,111 @@
       }
     }
   }
+
+  // headerBody
+  .header_body {
+    background-color: #119769;
+    padding         : 20px 0 15px;
+
+    .left {
+      a {
+        display: flex;
+        height : 100%;
+        color  : #fff;
+
+        .site_logo_img {
+          width: 80px;
+        }
+
+        .site_title {
+          font-size  : 20px;
+          margin     : 10px 0 0px 10px;
+          line-height: 28px;
+          font-family: 'OpenSansSemiBold', sans-serif;
+          color      : #fff;
+
+
+        }
+      }
+    }
+
+    .right {
+      margin-top: 15px;
+
+      .fax {
+        display        : flex;
+        justify-content: flex-end;
+
+        a {
+          color  : #fff;
+          display: flex;
+
+          i {
+            color: #fff;
+          }
+
+          .fax_text {
+            font-size  : 13px;
+            margin-left: 10px;
+            font-weight: 600;
+            color      : #fff;
+          }
+        }
+      }
+
+      .phone {
+        color: #fff;
+
+        .phone_top {
+          display: flex;
+
+          i {
+            border       : 1px solid #fff;
+            border-radius: 50%;
+            display      : block;
+            padding      : 5px;
+          }
+
+          .phone_body {
+            margin-left: 15px;
+
+            .tel_text {
+              font-size: 13px;
+              color    : #fff;
+            }
+
+            .tel_number {
+              font-size  : 20px;
+              font-weight: 600;
+              color      : #fff;
+
+            }
+
+            .phone_url {
+              font-size  : 13px;
+              font-weight: 600;
+              color      : #fff;
+
+              .tel_number {
+                font-size  : 20px;
+                margin-left: 5px;
+              }
+            }
+          }
+
+        }
+
+        .phone_top.bottom {
+          margin-top: 18px;
+
+          .phone_body {
+            .phone_url {
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
